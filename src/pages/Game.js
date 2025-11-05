@@ -44,7 +44,7 @@ const Game = () => {
   const saveScore = async () => {
     const name = playerName || 'Anonymous';
     try {
-      await fetch('http://localhost:5000/api/scores', {
+      await fetch('https://lab2-be.vercel.app/api/scores', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, score, time: 60 - timeLeft })

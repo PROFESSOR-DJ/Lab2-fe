@@ -9,7 +9,7 @@ const Leaderboard = () => {
 
   const fetchScores = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/leaderboard');
+      const response = await fetch('https://lab2-be.vercel.app/api/leaderboard');
       const data = await response.json();
       setScores(data);
     } catch (error) {
